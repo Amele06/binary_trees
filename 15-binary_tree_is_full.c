@@ -1,6 +1,7 @@
 #include "binary_trees.h"
 /**
- * binary_tree_is_full - checks if the tree is full (meaning it has two or no children
+ * binary_tree_is_full - checks if the tree is full
+ * meaning it has two or no children
  * @tree: pointer to the tree to be checked
  * Return: would return 1 if it's fulle, and 0 in reverse case
  */
