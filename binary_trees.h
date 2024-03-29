@@ -95,6 +95,14 @@ int is_bst_helper(const binary_tree_t *tree, int bottom, int top);
 int binary_tree_is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
-bst_t *bst_search(const bst_t *tree, int value)
+bst_t *bst_search(const bst_t *tree, int value);
+avl_t *array_to_avl(int *array, size_t size);
+void bal(avl_t **tree);
+int successor(bst_t *node);
+int remove_type(bst_t *root)
+bst_t *bst_remove(bst_t *root, int value);
+avl_t *avl_remove(avl_t *root, int value);
+avl_t *sorted_array_to_avl(int *array, size_t size);
+void create_tree(avl_t **node, int *array, size_t size, int mode);
 
 #endif /* BINARY_TREES_H */
