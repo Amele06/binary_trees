@@ -97,17 +97,15 @@ void traverse_level_order(const binary_tree_t *tree, void (*func)(int))
     if (tree == NULL || func == NULL)
         return;
 
-    levelorder_queue_t *head = create_queue_node((binary_tree_t *)tree);
-    if (head == NULL)
-        return;
+	levelorder_queue_t *head = create_queue_node((binary_tree_t *)tree);
+	if (head == NULL)
+		return;
+	levelorder_queue_t *tail = head;
 
-    levelorder_queue_t *tail = head;
-
-    while (head != NULL)
-    {
-        push_queue(head->node, head, &tail, func);
-        dequeue(&head);
-    }
-
-    destroy_queue(head);
+	while (head != NULL)
+	{
+		push_queue(head->node, head, &tail, func);
+		dequeue(&head)
+	}
+	destroy_queue(head);
 }
