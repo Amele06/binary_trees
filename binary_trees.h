@@ -72,5 +72,11 @@ void push_queue(binary_tree_t *node, levelorder_queue_t *head,
 		levelorder_queue_t **tail, void (*func)(int));
 void dequeue(levelorder_queue_t **head);
 void traverse_level_order(const binary_tree_t *tree, void (*func)(int));
+levelorder_queue_t *create_node(binary_tree_t *node);
+void free_queue(levelorder_queue_t *head);
+void pint_push(binary_tree_t *node, levelorder_queue_t *head,
+		levelorder_queue_t **tail, void (*func)(int));
+void pop(levelorder_queue_t **head);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 #endif /* BINARY_TREES_H */
