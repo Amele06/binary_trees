@@ -1,8 +1,18 @@
 #include "binary_trees.h"
+
+void pop(levelorder_queue_t **head);
+int binary_tree_is_complete(const binary_tree_t *tree);
+void push(binary_tree_t *node, levelorder_queue_t *head,
+		levelorder_queue_t **tail);
+levelorder_queue_t *create_node(binary_tree_t *node);
+void free_queue(levelorder_queue_t *head);
+
 /**
  * create_node - Creates a new levelorder_queue_t node.
- * @node: Type pointer of node to be created
- * Return: the node created
+ * @node: The binary tree node for the new node to contain.
+ *
+ * Return: If an error occurs, NULL.
+ *         Otherwise, a pointer to the new node.
  */
 levelorder_queue_t *create_node(binary_tree_t *node)
 {
@@ -20,7 +30,7 @@ levelorder_queue_t *create_node(binary_tree_t *node)
 
 /**
  * free_queue - Frees a levelorder_queue_t queue.
-* @head: Node of the linked_list
+ * @head: A pointer to the head of the queue.
  */
 void free_queue(levelorder_queue_t *head)
 {
@@ -28,9 +38,9 @@ void free_queue(levelorder_queue_t *head)
 
 	while (head != NULL)
 	{
-		temp_node = head->next;
+		tmp = head->next;
 		free(head);
-		head = temp_node;
+		head = tmp;
 	}
 }
 
