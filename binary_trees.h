@@ -89,5 +89,6 @@ void push(binary_tree_t *node, levelorder_queue_t *head,
 		levelorder_queue_t **tail);
 levelorder_queue_t *create_node(binary_tree_t *node);
 void free_queue(levelorder_queue_t *head);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 
 #endif /* BINARY_TREES_H */
